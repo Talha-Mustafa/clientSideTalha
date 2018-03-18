@@ -5,7 +5,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-//********************************************************************
+
+
+//------------------XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX---------------------
 
 //*****************************COMPONENTS*****************************
 import { AppComponent } from './app.component';
@@ -14,23 +16,19 @@ import { CategoriesComponent } from './categories/categories.component';
 import { AddListingComponent } from './add-listing/add-listing.component';
 
 
-
-//*********************************************************************
+//------------------XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX---------------------
 
 
 //*****************************NGX-BOOSTRAP****************************
  import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
  import { TooltipModule } from 'ngx-bootstrap/tooltip';
  import { ModalModule } from 'ngx-bootstrap/modal';
-
-//*********************************************************************
-
+//------------------XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX---------------------
 
 
 //************IMPORTING ROUTER FILE**********
 import { appRoutes } from '../routes';
-//*******************************************
-
+//------------------XXXXX---------------------
 
 @NgModule({
   declarations: [
@@ -41,18 +39,18 @@ import { appRoutes } from '../routes';
   ],
   imports: [
     BrowserModule,
-    
-//INCLUDING ROUTER
+    FormsModule,
+//*********INCLUDING ROUTER*********
     RouterModule.forRoot(appRoutes),
-//*****************
+//------------XXXXXXXXX-------------
 
 
 
-//*******NGX-BOOSTRAP**********
+//*******NGX-BOOSTRAP SETUP**********
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
     ModalModule.forRoot()
-//******************************
+//------------XXXXXXXXX---------------
   ],
   exports: [BsDropdownModule, TooltipModule, ModalModule],
   providers: [],
